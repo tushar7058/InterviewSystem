@@ -10,3 +10,8 @@ openai
 deepface
 openai-whisper
 requests
+SpeechRecognition
+sqlalchemy
+python-dotenv
+passlib[bcrypt]
+python-jose
