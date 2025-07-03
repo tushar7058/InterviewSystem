@@ -15,3 +15,7 @@ sqlalchemy
 python-dotenv
 passlib[bcrypt]
 python-jose
+transformers
+sounddevice
+google-cloud-speech
+pyaudio 
