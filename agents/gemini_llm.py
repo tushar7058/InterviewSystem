@@ -2,15 +2,16 @@ import os
 import requests
 from dotenv import load_dotenv
 
-load_dotenv()  # Load environment variables
+load_dotenv()
 
 class GeminiLLM:
-    def __init__(self, api_key=None, model="models/gemini-pro"):
+    def __init__(self, api_key=None, model="gemini-1.5-flash"):
         self.api_key = api_key or os.getenv("GEMINI_API_KEY")
         if not self.api_key:
             raise ValueError("API key not provided and not found in environment variables.")
+        # FIXED API URL
         self.model = model
-        self.api_url = f"https://generativelanguage.googleapis.com/v1/{self.model}:generateContent?key={self.api_key}"
+        self.api_url = f"https://generativelanguage.googleapis.com/v1/models/{self.model}:generateContent?key={self.api_key}"
 
     def generate(self, prompt):
         headers = {"Content-Type": "application/json"}
@@ -26,8 +27,9 @@ class GeminiLLM:
                 print("Parsing error:", e)
                 return result
         else:
-            return f"Error: {response.status_code} {response.text}"
+            print(f"Error: {response.status_code} {response.text}")
+            return None
 
-# Example usage:
+# Example Usage
 gemini = GeminiLLM()
 print(gemini.generate("Ask the first interview question."))
