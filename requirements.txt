@@ -6,3 +6,7 @@ uvicorn
 fpdf
 aiortc
 nltk
+openai
+deepface
+openai-whisper
+requests
