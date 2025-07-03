@@ -24,5 +24,5 @@ class GeminiLLM:
             return f"Error: {response.status_code} {response.text}"
 
 # Example usage:
-gemini = GeminiLLM(api_key="your-gemini-api-key")
+gemini = GeminiLLM(api_key="AIzaSyDNQ96yuN3wOjj8HZLPLEBP0InRiYQWM4M")
 print(gemini.generate("Ask the first interview question."))
