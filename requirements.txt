@@ -1,0 +1,8 @@
+opencv-python
+pyaudio
+numpy
+fastapi
+uvicorn
+fpdf
+aiortc
+nltk
